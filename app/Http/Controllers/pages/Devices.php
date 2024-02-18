@@ -18,8 +18,9 @@ class Devices extends Controller
     public function index()
     {
         $devices = Device::all();
+        $types = Type::all();
         
-        return view('content.pages.devices', compact('devices'));
+        return view('content.pages.devices', compact('devices','types'));
     }
 
     public function create()

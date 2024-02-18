@@ -49,26 +49,21 @@ $configData = Helper::appClasses();
                 <div class="mb-3">
                   <label for="selectpickerIcons" class="form-label">Tipo de dispositivo</label>
                   
-                    <select class="selectpicker w-100 show-tick" id="selectpickerIcons" data-icon-base="bx" data-tick-icon="bx-check" data-style="btn-default" name="icon">>
-                       @forelse ($types as $type)
-                       <option data-icon="bx bx-{{$type->icon}}" value="{{$type->id}}">{{$type->name}}</option>
-                           
-                       @empty
-                           
-                       @endforelse
-                    </select>
-                </div>         
-                <div class="mb-3">
-                  <label for="selectpickerIcons" class="form-label">Sistema Operativo</label>
-                  
-                    <select class="selectpicker w-100 show-tick" id="selectpickerIcons2" data-icon-base="bx" data-tick-icon="bx-check" data-style="btn-default" name="icon">>
-                       @forelse ($sos as $so)
-                       <option data-icon="bx bx-{{$so->icon}}" value="{{$so->id}}">{{$so->name}}</option>
-                           
-                       @empty
-                           
-                       @endforelse
-                    </select>
+                  <select name="type_id" class="selectpicker w-100 show-tick" id="selectpickerIcons" data-icon-base="bx" data-tick-icon="bx-check" data-style="btn-default">
+                    @forelse ($types as $type)
+                    <option data-icon="bx bx-{{$type->icon}}" value="{{$type->id}}">{{$type->name}}</option>
+                    @empty
+                    @endforelse
+                </select>
+                <br>
+                <label for="selectpickerIcons2" class="form-label">Sistema Operativo</label>
+                <select name="sos_id" class="selectpicker w-100 show-tick" id="selectpickerIcons2" data-icon-base="bx" data-tick-icon="bx-check" data-style="btn-default">
+                    @forelse ($sos as $so)
+                    <option data-icon="bx bx-{{$so->icon}}" value="{{$so->id}}">{{$so->name}}</option>
+                    @empty
+                    @endforelse
+                </select>
+                
                 </div>
                 <div class="mb-3">
                   <label class="form-label" for="basic-default-fullname">Nombre</label>

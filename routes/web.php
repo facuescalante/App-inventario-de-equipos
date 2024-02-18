@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-$controller_path = 'App\Http\Controllers';
+
 
 // Main Page Route
 
@@ -67,5 +67,9 @@ Route::middleware([
     Route::get('/devices/destroy/{device_id}', $controller_path . '\pages\Devices@destroy')->name('pages-devices-destroy');
     Route::get('/devices/switch/{device_id}', $controller_path . '\pages\Devices@switch')->name('pages-devices-switch');
     Route::get('/devices/export', $controller_path . '\pages\Devices@export')->name('pages-devices-export');
+
+
+    //backups
+    Route::get('/backups', $controller_path . '\pages\Backups@index')->name('pages-backups');
 
 });

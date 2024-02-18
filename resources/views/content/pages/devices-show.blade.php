@@ -47,21 +47,21 @@ $configData = Helper::appClasses();
                 <div class="mb-3">
                   <label for="selectpickerIcons" class="form-label">Tipo de dispositivo</label>
                   
-                  <select class="selectpicker w-100 show-tick" id="selectpickerIcons" data-icon-base="bx" data-tick-icon="bx-check" >
-                      @forelse ($types as $type)
-                      <option data-icon="bx bx-{{$type->icon}}" @if($type->id == $device->type_id) selected @endif value="{{$type->id}}">{{$type->name}}</option>
-                      @empty
-                      @endforelse
-                  </select>
-              </div>
-              <div class="mb-3">
-                  <label for="selectpickerIcons2" class="form-label">Sistema Operativo</label>
-                  <select class="selectpicker w-100 show-tick" id="selectpickerIcons2" data-icon-base="bx" data-tick-icon="">
-                      @forelse ($sos as $so)
-                      <option value="{{$so->id}}" @if($so->id == $device->sos_id) selected @endif>{{$so->name}}</option>
-                      @empty
-                      @endforelse
-                  </select>
+                  <select name="type_id" class="selectpicker w-100 show-tick" id="selectpickerIcons" data-icon-base="bx" data-tick-icon="bx-check" >
+                    @forelse ($types as $type)
+                    <option data-icon="bx bx-{{$type->icon}}" @if($type->id == $device->type_id) selected @endif value="{{$type->id}}">{{$type->name}}</option>
+                    @empty
+                    @endforelse
+                </select>
+                <br>
+                <label for="selectpickerIcons2" class="form-label">Sistema Operativo</label>
+                <select name="sos_id" class="selectpicker w-100 show-tick" id="selectpickerIcons2" data-icon-base="bx" data-tick-icon="">
+                    @forelse ($sos as $so)
+                    <option value="{{$so->id}}" @if($so->id == $device->sos_id) selected @endif>{{$so->name}}</option>
+                    @empty
+                    @endforelse
+                </select>
+                
               </div>
                                
               <div class="mb-3">
