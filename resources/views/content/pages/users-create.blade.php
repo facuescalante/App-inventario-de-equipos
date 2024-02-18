@@ -7,6 +7,7 @@ $configData = Helper::appClasses();
 @section('title', 'Crear usuario')
 
 @section('content')
+
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -16,6 +17,7 @@ $configData = Helper::appClasses();
         </ul>
     </div>
  @endif
+ 
 <div class="row">
     <div class="col-lg-12">
         <div class="card mb-4">
@@ -25,6 +27,7 @@ $configData = Helper::appClasses();
             <div class="card-body">
               <form method="POST" action="{{ route('pages-users-store') }}" > 
                 @csrf
+                
                 <div class="mb-3">
                   <label class="form-label" for="basic-default-fullname">Nombre completo</label>
                   <input type="text" name="name" class="form-control" id="basic-default-fullname" placeholder="Juan Perez"  required/>

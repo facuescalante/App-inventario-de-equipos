@@ -7,6 +7,7 @@ $configData = Helper::appClasses();
 @section('title', 'Usuarios')
 
 @section('content')
+
 <h4>Usuarios de la aplicación</h4>
 <a href="{{ route('pages-users-create')}}" class="btn btn-primary" style="margin-bottom: 15px">Añadir nuevo usuario</a>
 <div class="card">
