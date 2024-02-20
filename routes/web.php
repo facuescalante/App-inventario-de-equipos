@@ -71,5 +71,7 @@ Route::middleware([
 
     //backups
     Route::get('/backups', $controller_path . '\pages\Backups@index')->name('pages-backups');
-
+    Route::get('/backups/create', $controller_path . '\pages\Backups@create')->name('pages-backups-create');
+    Route::get('/backups/delete/{id}', $controller_path . '\pages\Backups@delete')->name('pages-backups-delete');
+    
 });

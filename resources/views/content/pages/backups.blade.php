@@ -8,10 +8,10 @@ $configData = Helper::appClasses();
 
 @section('content')
 <h4>Backups: Disaster Recovery</h4>
-<a href="{{ route('pages-sos-create')}}" class="btn btn-primary" style="margin-bottom: 15px">Crear nueno Backup</a>
+<a href="{{ route('pages-backups-create')}}" class="btn btn-primary" style="margin-bottom: 15px">Crear nuevo Backup</a>
 <div class="card">
     
-    <div class="table-responsive text-nowrap">
+    <div class="table text-nowrap">
       <table class="table">
         <thead>
           <tr>
@@ -22,25 +22,16 @@ $configData = Helper::appClasses();
           </tr>
         </thead>
         <tbody class="table-border-bottom-0">
-           {{-- @foreach ($sos as $so)
+           @foreach ($backups as $backup)
           <tr>
-                <td>{{ $so->id }}</td>
-                <td>{{ $so->name }}</td>
-                <td>{{ $so->version }}</td>
+                <td>{{ $backup->id }}</td>
+                <td>{{ $backup->status }}</td>
+                <td>{{ $backup->created_at }}</td>
+                                 
                 <td>
-                  @if ($so->active)
-                  <a href="{{ route('pages-sos-switch', $so->id) }} ">
-                  <span class="badge bg-label-success">Activo</span></a>
-                  @else
-                  <a href="{{ route('pages-sos-switch', $so->id) }} ">
-                  <span class="badge bg-label-danger">Inactivo</span></a>
-                                         
-                  @endif                                        
-                </td>
-                <td>{{ $so->created_at }}</td>
-                <td><a href="{{ route('pages-sos-show', $so->id) }}" >Editar </a> | <a href="{{ route('pages-sos-destroy', $so->id) }}" >Borrar </a></td>
+                  <a href="{{ $backup->url }}" >Download </a> | <a href="{{ route('pages-backups-delete', $backup->id) }}" >Borrar </a></td>
           </tr>
-          @endforeach--}}
+          @endforeach
          </tbody>
       </table>
     </div>
