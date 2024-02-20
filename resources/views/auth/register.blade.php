@@ -36,13 +36,13 @@ $customizerHidden = 'customizer-hide';
         <div class="app-brand mb-4">
           <a href="{{url('/')}}" class="app-brand-link gap-2 mb-2">
             <span class="app-brand-logo demo">@include('_partials.macros')</span>
-            <span class="app-brand-text demo h3 mb-0 fw-bold">Proyecto Inventario</span>
+            <span class="app-brand-text demo h3 mb-0 fw-bold">App-Proyecto Inventario</span>
           </a>
         </div>
         <!-- /Logo -->
 
         <!-- Register Card -->
-        <h4 class="mb-2">Con inspiracion de ERDI ❤</h4>
+        <h4 class="mb-2">Con la inspiracion de ERDI ❤</h4>
         <p class="mb-4">Proyecto autodidacta de J.F Escalante</p>
 
         <form id="formAuthentication" class="mb-3" action="{{ route('register') }}" method="POST">

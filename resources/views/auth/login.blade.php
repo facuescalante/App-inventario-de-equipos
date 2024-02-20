@@ -40,7 +40,7 @@ $customizerHidden = 'customizer-hide';
           </a>
         </div>
         <!-- /Logo -->
-        <h4 class="mb-2">Welcome to Facundo's Project! 👋</h4>
+        <h4 class="mb-2 text-center">Welcome to Facundo's App! 👋</h4>
         <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
         @if (session('status'))
