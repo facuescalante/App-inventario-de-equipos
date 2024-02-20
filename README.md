@@ -81,8 +81,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ![Captura de pantalla (916)](https://github.com/facuescalante/proyecto-inventario-de-equipos/assets/152016798/31c143a0-4b9c-46b9-a14b-2eb8ed574376)
 ![Captura de pantalla (917)](https://github.com/facuescalante/proyecto-inventario-de-equipos/assets/152016798/f1b22c9f-0287-43e6-9f1c-a5ee4c42da0a)
 ![Captura de pantalla (918)](https://github.com/facuescalante/proyecto-inventario-de-equipos/assets/152016798/8e2216c4-1d92-48f9-8ba0-e65d230fa8fb)
-![Captura de pantalla (920)](https://github.com/facuescalante/proyecto-inventario-de-equipos/assets/152016798/e53c148d-801c-496b-8e7a-cfd4ea9f4b88)
-![Captura de pantalla (921)](https://github.com/facuescalante/proyecto-inventario-de-equipos/assets/152016798/a04e5061-42ef-4a5c-b609-4edd7d0b2568)
+![Captura de pantalla (925)](https://github.com/facuescalante/proyecto-inventario-de-equipos/assets/152016798/944611af-5d9c-4e3f-a7ff-dcf7e239c037)
+![Captura de pantalla (924)](https://github.com/facuescalante/proyecto-inventario-de-equipos/assets/152016798/c9a1520f-51ef-467d-9aec-513e6bb29fc5)
 ![Captura de pantalla (923)](https://github.com/facuescalante/proyecto-inventario-de-equipos/assets/152016798/b0337d01-6cab-4e1c-ae37-cd9f6fe83454)
 ![Captura de pantalla (922)](https://github.com/facuescalante/proyecto-inventario-de-equipos/assets/152016798/a534de12-5136-4e55-99be-6b031e54e504)
 
