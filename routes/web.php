@@ -73,5 +73,15 @@ Route::middleware([
     Route::get('/backups', $controller_path . '\pages\Backups@index')->name('pages-backups');
     Route::get('/backups/create', $controller_path . '\pages\Backups@create')->name('pages-backups-create');
     Route::get('/backups/delete/{id}', $controller_path . '\pages\Backups@delete')->name('pages-backups-delete');
+
+
+    //switch de roles
+    Route::get('/roles/switch/{user_id}', $controller_path . '\pages\Users@switch')->name('pages-users-switch-role');
+
+    //reports
+    Route::get('/reports', $controller_path . '\pages\Reports@index')->name('pages-reports');
+    Route::get('/reports/create', $controller_path . '\pages\Reports@create')->name('pages-reports-create');
+    Route::get('/reports/delete/{id}', $controller_path . '\pages\Reports@delete')->name('pages-reports-delete');
+
     
 });

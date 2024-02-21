@@ -58,6 +58,20 @@ public function destroy($user_id){
   $user->delete();
   return redirect()->route('pages-users');
 }
+public function switch($user_id){
+
+  $user = User::find($user_id);
+  if($user->hasRole('admin')){
+    $user->removeRole('admin');
+    $user->assignRole('user');
+  }else{
+    $user->removeRole('user');
+    $user->assignRole('admin');
+  }
+
+
+  return redirect()->route('pages-users');
+}
 
 
 }

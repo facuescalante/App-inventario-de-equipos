@@ -21,6 +21,7 @@ $configData = Helper::appClasses();
             <th>Id</th>
             <th>Nombre</th>
             <th>Email</th>
+            <th>Admin</th>
             <th>Creado en</th>
             <th>Acciones</th>
           </tr>
@@ -31,6 +32,15 @@ $configData = Helper::appClasses();
                 <td>{{ $user->id }}</td>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
+                <td>
+                  @if ($user->hasRole('admin'))
+                <a href="{{ route('pages-users-switch-role', $user->id) }}">
+                <span class="badge bg-primary">Administrador</span></a>
+                @else
+                <a href="{{ route('pages-users-switch-role', $user->id) }}">
+                <span class="badge bg-success">Usuario</span></a>
+                @endif                 
+                </td>
                 <td>{{ $user->created_at }}</td>
                 <td><a href="{{ route('pages-users-show', $user->id) }}" >Editar </a> | <a href="{{ route('pages-users-destroy', $user->id) }}" >Borrar </a></td>
           </tr>
@@ -38,8 +48,12 @@ $configData = Helper::appClasses();
          </tbody>
       </table>
     </div>
+  </div>  
+  @endrole
+  @role('user')
+  <div class= "card">
+    <h1 class="text-danger">NO TIENE PERMISOS PARA VER ESTA SECCIÓN</h1>
   </div>
-  
   @endrole
   @endsection
   
